@@ -10,6 +10,6 @@ $ pip install -r requirements.txt
 
 Execute the interface with
 
-'''console
+´´´console
 $ python main.py
-''''
+´´´
