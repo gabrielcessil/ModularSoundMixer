@@ -139,6 +139,103 @@ The system will detect connected modules and allow application assignment throug
 2. **Message Integrity**: Checks for consistency in message size and checksum validation.
 3. **Volume Variation**: Monitors accuracy in volume adjustments.
 
+## Graphical Interface Tests
+
+The graphical interface tests validated several criteria established in RNF1 and RNF2 and were sufficient to ensure the system's functionality.
+
+Due to project delays, the interface was tested using an Arduino Nano, which emulated the control signals of potential modules.
+
+### Information Capture
+In this test, the Arduino sends a known sequence of numbers and letters in the following audio control format:
+```
+[A-Z] [0] [0.00 to 1.00]
+```
+The messages are captured and compared with the expected values.
+
+- **First Test:** Compares the number of messages received with the expected number to ensure no data loss.
+- **Second Test:** Compares the content of the messages to ensure proper capture of letters and values, confirming their use in control signals.
+
+Both test routines achieved 100% accuracy.
+
+### Module Detection
+This test verifies that the interface correctly detects and adapts to changes in the number of connected modules.
+
+Messages of increasing size (indicating more connected modules) are received in a known sequence. The number of detected modules and visible menu items are recorded in each iteration and compared to the expected sequence.
+
+- **First Test:** Verifies the number of detected modules.
+- **Second Test:** Verifies the number of visible items in the interface menu.
+
+Both test routines achieved 596 correct detections.
+
+### Application Selection
+This test validates the listing and selection of applications in the interface menu.
+
+- **First Test:** Verifies that the list of selected applications matches the system’s audio sources in each iteration.
+- **Second Test:** Emits a control signal to constantly adjust the volume of a single module. It verifies that the selected application in the interface matches the one with the altered volume in the system.
+
+Both test routines were successful.
+
+### Audio Control Test
+Control signals are emitted to adjust the volume of two applications. These signals are captured and saved at each iteration, while system audio levels are also recorded. A visual comparison is made to ensure that audio levels follow the generated control signals over time.
+
+![Audio Control Test](TesteCOntrole.png)
+
+This test is validated by visual inspection. The audio curve (orange) follows the control signal (blue) after a brief delay, confirming the application's assignment in the interface.
+
+### Delay Measurement
+The `time` library is used to log timestamps, allowing calculation of time intervals between each code step.
+
+- **First Test:** Measures the average time between the creation of the `Modmixer` object and the first display of the selection menu over 30 interface executions.
+- **Second Test:** Measures the average time between capturing the control signal and calling the volume adjustment library function over 30 executions.
+
+Results:
+- **Menu display time:** 17.73 seconds
+- **Control signal to system action:** 0.02 seconds
+
+## Serial Communication Tests
+
+### Module Detection and Address Assignment
+Upon starting the main module, a message is sent to the default I2C address (`0x01`), where all secondary modules initially begin. Each secondary module waits for the previous module to be configured before joining the I2C bus. This access order is ensured through high-level digital signaling cascaded between modules.
+
+After receiving the message at the default address, secondary modules verify the checksum field. If the received value matches the internally calculated sum, the message content is verified. If the flag to set a new address is detected, the module reassigns its I2C address and allows the next module to start with the default address.
+
+![Module Configuration](config.png)
+
+The above figure demonstrates the communication process, showing address assignment with four devices during the main module’s setup phase.
+
+### Message Integrity Test
+This test ensures communication integrity with already configured devices and detects errors.
+
+Errors are detected in two ways:
+- The number of bytes received differs from the requested number.
+- The checksum byte differs from the internally calculated value.
+
+![Message Integrity](mensagens.png)
+
+The figure above displays:
+- **DISP:** Device number
+- **err:** Accumulated communication errors
+- **ADDR:** Device address
+- **size:** Bytes requested vs. received
+- **Verification:** Byte count and checksum validation
+- **Message Content:** Contents of each of the three message bytes
+
+Disconnecting a module results in no bytes received, which is detected as a discrepancy between request and response. This scenario is illustrated in the referenced figure.
+
+### Volume Variation Test
+Finally, graphs were plotted showing the first byte of each message, representing the module’s volume.
+
+![Volume Variation](volume.png)
+
+## Issues Encountered
+Several challenges during the project led to delays in graphical interface and serial communication development.
+
+- **PySimpleGUI Issues:** The library used for the graphical interface presented unforeseen issues in its documentation examples. Recent updates by the developers altered how interface closure events are handled, splitting them into "intent to close" and "complete closure."
+  
+- **PySerial Issues:** The `readline` function from the PySerial library, used to collect commands from modules via USB, did not always adhere to the defined timeout. Replacing it with the similar `read_until` function resolved these issues. Additionally, the delay between write and read operations was not documented, leading to communication failures.
+
+
+
 ## Known Issues
 - **PySimpleGUI Bugs**: Issues with interface closing events due to recent updates.
 - **PySerial Readline**: Inconsistent timeout handling, resolved using `read_until`.
