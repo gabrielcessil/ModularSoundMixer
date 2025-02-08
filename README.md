@@ -133,7 +133,7 @@ The system will detect connected modules and allow application assignment throug
 - **Delay Handling**: Lack of documentation on delay between read and write operations caused initial failures.
 
 ## Contributors
-- **Guilherme Turatto** - Serial Communication
+- **Guilherme Turatto** - Embedded software and Hardware
 - **Gabriel Cesar Silveira** - Graphical Interface
 
 ## License
