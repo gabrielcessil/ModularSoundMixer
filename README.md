@@ -1,9 +1,12 @@
 # Modmixer
 
-A modular sound controller designed for Linux applications. This project covers hardware development, embedded software, and a graphical interface to provide seamless volume control for multiple applications on your desktop.
+*This project was developed in 2022 as part of the Integrative Project II at the Federal University of Santa Catarina, Joinville Technological Campus.*
+
+## About the Project
+
+**Modmixer** is a low-cost modular sound controller designed for Linux applications. This project covers hardware development, embedded software, and a graphical interface to provide seamless volume control for multiple applications on your desktop. The hardware and embedded software are based on ESP8266 microcontroller and allows plug-and-play of multiple control modules. Also, the interface allows the assingment of the modules based on the running applications.
 
 ## Table of Contents
-- [About the Project](#about-the-project)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -11,13 +14,12 @@ A modular sound controller designed for Linux applications. This project covers 
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Technical Details](#technical-details)
+- [Diagrams](#diagrams)
 - [Testing](#testing)
 - [Known Issues](#known-issues)
 - [Contributors](#contributors)
 - [License](#license)
 
-## About the Project
-**Modmixer** is a low-cost, modular sound controller for Linux desktops, allowing users to adjust the volume of individual applications using physical modules connected via USB. The project integrates CAD modeling, electronic assembly, serial communication, and GUI development.
 
 ## Features
 - **Graphical Interface**: Easily assign applications to modules.
@@ -108,6 +110,9 @@ The system will detect connected modules and allow application assignment throug
   - 7 hours print time per module.
 - **Final Adjustments**: Position of potentiometers changed to the top, and a logo was added to the cases.
 
+### Diagrams
+
+
 ## Testing
 
 ### Interface Testing
@@ -136,5 +141,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-*This project was developed as part of the Integrative Project II at the Federal University of Santa Catarina, Joinville Technological Campus.*
 
