@@ -1,6 +1,7 @@
 # Modmixer
 
 *This project was developed in 2022 as part of the Integrative Project II at the Federal University of Santa Catarina, Joinville Technological Campus.*
+
 Unfortunately, for this reason, many information are in Portuguese (code and diagrams). 
 Feel free to reach out in case of interest or doubts, we would love to help.
 
