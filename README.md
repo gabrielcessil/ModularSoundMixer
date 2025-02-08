@@ -77,14 +77,8 @@ The system will detect connected modules and allow application assignment throug
 - **Documentation Gaps**: Delay handling between write and read operations in PySerial.
 
 ## Contributors
-- **Arthur Henrique Mallmann** - CAD Assembly
-- **Assis Gabriel Greselle** - Electronics Assembly
 - **Guilherme Turatto** - Serial Communication
 - **Gabriel Cesar Silveira** - Graphical Interface
-- **Gabriel Luiz Martins** - Project Support
-
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
