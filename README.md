@@ -4,12 +4,12 @@ This project creates a modular sound mixer for the running computer aplications,
 
 Install dependencies with
 
-'''console
+```bash
 $ pip install -r requirements.txt
-'''
+```
 
 Execute the interface with
 
-´´´console
+```bash
 $ python main.py
-´´´
+```
