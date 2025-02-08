@@ -1,5 +1,0 @@
-Instale as dependências com:
-$ pip install -r requirements.txt
-
-Execute a interface com:
-$ python main.py
