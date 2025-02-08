@@ -111,6 +111,12 @@ The system will detect connected modules and allow application assignment throug
 - **Final Adjustments**: Position of potentiometers changed to the top, and a logo was added to the cases.
 
 ### Diagrams
+![GUI Activity Diagram](Figures/GUI_Activity_Diagram.jpeg)
+![GUI Classes Diagram](Figures/GUI_Classes.jpeg.jpeg)
+![GUI Main State Machine](Figures/GUI_MainStateMachine.jpeg)
+![GUI Screen State Machine](Figures/ScreensStateMachine.jpeg)
+![GUI Modules State Machine](Figures/StateMachineModules.jpeg)
+
 
 
 ## Testing
