@@ -178,7 +178,7 @@ Both test routines were successful.
 ### Audio Control Test
 Control signals are emitted to adjust the volume of two applications. These signals are captured and saved at each iteration, while system audio levels are also recorded. A visual comparison is made to ensure that audio levels follow the generated control signals over time.
 
-![Audio Control Test](Test_Control.png)
+![Audio Control Test](Figures/Test_Control.png)
 
 This test is validated by visual inspection. The audio curve (orange) follows the control signal (blue) after a brief delay, confirming the application's assignment in the interface.
 
