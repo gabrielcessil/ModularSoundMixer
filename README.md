@@ -16,22 +16,23 @@ Feel free to reach out in case of interest or doubts, we would love to help.
 
 **Modmixer** is a low-cost modular sound controller designed for Linux applications. This project covers hardware development, embedded software, and a graphical interface to provide seamless volume control for multiple applications on your desktop. The hardware and embedded software are based on ESP8266 microcontroller and allows plug-and-play of multiple control modules. Also, the interface allows the assingment of the modules based on the running applications.
 
-<p align="center">
-  <div style="display: inline-block; text-align: center; margin: 0 10px;">
-    <img src="Figures/TestinCircuitPhoto.png" alt="Test Circuit" width="200" height="150"/><br/>
-    <b>Test Circuit</b>
-  </div>
-  
-  <div style="display: inline-block; text-align: center; margin: 0 10px;">
-    <img src="Figures/Screen.png" alt="Main Screen" width="200" height="150"/><br/>
-    <b>Main Screen</b>
-  </div>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="Figures/TestinCircuitPhoto.png" alt="Test Circuit" width="200" height="150"/><br/>
+      <b>Test Circuit</b>
+    </td>
+    <td align="center">
+      <img src="Figures/Screen.png" alt="Main Screen" width="200" height="150"/><br/>
+      <b>Main Screen</b>
+    </td>
+    <td align="center">
+      <img src="Figures/Secundario.png" alt="Module" width="200" height="150"/><br/>
+      <b>Module</b>
+    </td>
+  </tr>
+</table>
 
-  <div style="display: inline-block; text-align: center; margin: 0 10px;">
-    <img src="Figures/Secundario.png" alt="Module" width="200" height="150"/><br/>
-    <b>Module</b>
-  </div>
-</p>
 
 
 ## Table of Contents
