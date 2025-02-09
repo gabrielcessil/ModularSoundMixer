@@ -46,7 +46,7 @@ Feel free to reach out in case of interest or doubts, we would love to help.
   - [Functional Requirements](#functional-requirements)
   - [Non-Functional Requirements](#non-functional-requirements)
   - [Development Assumptions](#development-assumptions)
-  - [Embedded Code](#embedde-software)
+  - [Embedded Software](#embedde-software)
 - [Testing](#testing)
 - [Hardware Implementation](#hardware-implementation)
 - [Diagrams](#diagrams)
@@ -144,7 +144,7 @@ The system will detect connected modules and allow application assignment throug
   - 7 hours print time per module.
 - **Final Adjustments**: Position of potentiometers changed to the top, and a logo was added to the cases.
 
-## Embedded Program
+## Embedded Software
 
 ### I2C's Requisition Messages
 
