@@ -139,7 +139,7 @@ The system will detect connected modules and allow application assignment throug
 2. **Message Integrity**: Checks for consistency in message size and checksum validation.
 3. **Volume Variation**: Monitors accuracy in volume adjustments.
 
-## Graphical Interface Tests
+# Graphical Interface Tests
 
 The graphical interface tests validated several criteria established in RNF1 and RNF2 and were sufficient to ensure the system's functionality.
 
@@ -178,7 +178,7 @@ Both test routines were successful.
 ### Audio Control Test
 Control signals are emitted to adjust the volume of two applications. These signals are captured and saved at each iteration, while system audio levels are also recorded. A visual comparison is made to ensure that audio levels follow the generated control signals over time.
 
-![Audio Control Test](TesteCOntrole.png)
+![Audio Control Test](Test_Control.png)
 
 This test is validated by visual inspection. The audio curve (orange) follows the control signal (blue) after a brief delay, confirming the application's assignment in the interface.
 
@@ -192,14 +192,14 @@ Results:
 - **Menu display time:** 17.73 seconds
 - **Control signal to system action:** 0.02 seconds
 
-## Serial Communication Tests
+# Serial Communication Tests
 
 ### Module Detection and Address Assignment
 Upon starting the main module, a message is sent to the default I2C address (`0x01`), where all secondary modules initially begin. Each secondary module waits for the previous module to be configured before joining the I2C bus. This access order is ensured through high-level digital signaling cascaded between modules.
 
 After receiving the message at the default address, secondary modules verify the checksum field. If the received value matches the internally calculated sum, the message content is verified. If the flag to set a new address is detected, the module reassigns its I2C address and allows the next module to start with the default address.
 
-![Module Configuration](config.png)
+![Module Configuration](Figures/Test_ConfigSetup.png)
 
 The above figure demonstrates the communication process, showing address assignment with four devices during the main module’s setup phase.
 
@@ -210,7 +210,7 @@ Errors are detected in two ways:
 - The number of bytes received differs from the requested number.
 - The checksum byte differs from the internally calculated value.
 
-![Message Integrity](mensagens.png)
+![Message Integrity](Figures/Test_Messages.png)
 
 The figure above displays:
 - **DISP:** Device number
@@ -225,7 +225,7 @@ Disconnecting a module results in no bytes received, which is detected as a disc
 ### Volume Variation Test
 Finally, graphs were plotted showing the first byte of each message, representing the module’s volume.
 
-![Volume Variation](volume.png)
+![Volume Variation](Figures/Test_VolumeAmplitude.png)
 
 ## Issues Encountered
 Several challenges during the project led to delays in graphical interface and serial communication development.
