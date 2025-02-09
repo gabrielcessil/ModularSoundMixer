@@ -46,7 +46,7 @@ Feel free to reach out in case of interest or doubts, we would love to help.
   - [Functional Requirements](#functional-requirements)
   - [Non-Functional Requirements](#non-functional-requirements)
   - [Development Assumptions](#development-assumptions)
-  - [Embedded Software](#embedde-software)
+  - [Embedded Software](#embedded-software)
 - [Testing](#testing)
 - [Hardware Implementation](#hardware-implementation)
 - [Diagrams](#diagrams)
