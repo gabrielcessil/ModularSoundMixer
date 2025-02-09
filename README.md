@@ -130,7 +130,12 @@ The system will detect connected modules and allow application assignment throug
 | **Faixa de Valores** | 0 - 127     | 0 - 255                                  | 0 - 255                 |
 | **Função**        | Próprio endereço I2C ou novo endereço | Indicam funções a serem executadas pelo módulo | Soma de verificação     |
 
----
+### Requisition Flags
+
+| **Bits**  | **Flag**                           | **Function**                               |
+|-----------|------------------------------------|------------------------------------------|
+| 7 | setAddrFLAG | Indicates that the module must update the its adress as the one received on ID
+| 6 | nextModResetFlag | Indicates that the next module must be reset |
 
 ### Mensagem de Resposta I2C
 
@@ -140,9 +145,14 @@ The system will detect connected modules and allow application assignment throug
 | **Faixa de Valores** | 0 - 100                           | 0 - 255                                  | 0 - 255                 |
 | **Função**        | Leitura analógica já convertida    | Indicam parâmetros de funcionamento      | Soma de verificação     |
 
+### Answear Flags
+| **Bits**  | **Flag**                           | **Function**                               |
+|-----------|------------------------------------|------------------------------------------|
+| 7 | internalFailFLAG | Indicates that the module failed |
+| 6 | newModResetedFLAG | Indicates that the next module was reseted |
 
 
-### Diagrams
+## Diagrams
 ![GUI Main State Machine](Figures/GUI_MainStateMachine.jpeg)
 ![GUI Screen State Machine](Figures/ScreensStateMachine.jpeg)
 ![GUI Modules State Machine](Figures/StateMachineModules.jpeg)
