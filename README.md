@@ -151,14 +151,6 @@ The system will detect connected modules and allow application assignment throug
 | 7 | internalFailFLAG | Indicates that the module failed |
 | 6 | newModResetedFLAG | Indicates that the next module was reseted |
 
-
-## Diagrams
-![GUI Main State Machine](Figures/GUI_MainStateMachine.jpeg)
-![GUI Screen State Machine](Figures/ScreensStateMachine.jpeg)
-![GUI Modules State Machine](Figures/StateMachineModules.jpeg)
-![GUI Classes Diagram](Figures/GUI_Classes.jpeg)
-![GUI Activity Diagram](Figures/GUI_Activity_Diagram.jpeg)
-
 ## Testing
 
 ### Interface Testing
@@ -270,8 +262,16 @@ Several challenges during the project led to delays in graphical interface and s
 
 # Hardware Implementation
 
-![Volume Variation](Figures/TestinCircuitPhoto1.png)
+![Volume Variation](Figures/TestinCircuitPhoto.png)
 ![Volume Variation](Figures/TestinCircuitPhoto2.png)
+
+
+# Diagrams and System Modelling
+![GUI Main State Machine](Figures/GUI_MainStateMachine.jpeg)
+![GUI Screen State Machine](Figures/ScreensStateMachine.jpeg)
+![GUI Modules State Machine](Figures/StateMachineModules.jpeg)
+![GUI Classes Diagram](Figures/GUI_Classes.jpeg)
+![GUI Activity Diagram](Figures/GUI_Activity_Diagram.jpeg)
 
 
 ## Known Issues
