@@ -5,6 +5,11 @@
 Unfortunately, for this reason, many information are in Portuguese (code and diagrams). 
 Feel free to reach out in case of interest or doubts, we would love to help.
 
+
+## Contributors
+- **Gabriel Cesar Silveira** - Graphical Interface
+- **Guilherme Turatto** - Embedded software and Hardware
+
 ----
 
 ## About the Project
@@ -262,11 +267,16 @@ Several challenges during the project led to delays in graphical interface and s
 
 # Hardware Implementation
 
+Pictures from the testing setup:
+
 ![Volume Variation](Figures/TestinCircuitPhoto.png)
 ![Volume Variation](Figures/TestinCircuitPhoto2.png)
 
 
 # Diagrams and System Modelling
+
+The following diagrams describe the behavior of the system:
+
 ![GUI Main State Machine](Figures/GUI_MainStateMachine.jpeg)
 ![GUI Screen State Machine](Figures/ScreensStateMachine.jpeg)
 ![GUI Modules State Machine](Figures/StateMachineModules.jpeg)
@@ -281,11 +291,6 @@ Several challenges during the project led to delays in graphical interface and s
 
 ## Next steps 
 - Improvements on hardware documentation of module's and testing setup.
-
-## Contributors
-- **Guilherme Turatto** - Embedded software and Hardware
-- **Gabriel Cesar Silveira** - Graphical Interface
-
 
 ---
 
