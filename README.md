@@ -11,13 +11,9 @@ Feel free to reach out in case of interest or doubts, we would love to help.
 
 **Modmixer** is a low-cost modular sound controller designed for Linux applications. This project covers hardware development, embedded software, and a graphical interface to provide seamless volume control for multiple applications on your desktop. The hardware and embedded software are based on ESP8266 microcontroller and allows plug-and-play of multiple control modules. Also, the interface allows the assingment of the modules based on the running applications.
 
-<div style="text-align: center;">
-  <table style="margin: 0 auto;">
-    <tr>
-      <td><img src="Figures/TestinCircuitPhoto.png" alt="Test Circuit" width="200"/></td>
-      <td><img src="Figures/Screen.png" alt="Main Screen" width="200"/></td>
-    </tr>
-  </table>
+<div style="display: flex; justify-content: center;">
+  <img src="Figures/TestinCircuitPhoto.png" alt="Test Circuit" width="200" />
+  <img src="Figures/Screen.png" alt="Main Screen" width="200" style="margin-left: 20px;" />
 </div>
 
 ## Table of Contents
