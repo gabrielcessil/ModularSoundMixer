@@ -120,6 +120,28 @@ The system will detect connected modules and allow application assignment throug
   - 7 hours print time per module.
 - **Final Adjustments**: Position of potentiometers changed to the top, and a logo was added to the cases.
 
+## Embedded Program
+
+### Mensagem de Requisição I2C
+
+| **Nome**  | **ID**       | **FLAGS**                                | **CHECKSUM**            |
+|-----------|--------------|------------------------------------------|-------------------------|
+| **Tamanho**       | 1 byte       | 1 byte                                   | 1 byte                  |
+| **Faixa de Valores** | 0 - 127     | 0 - 255                                  | 0 - 255                 |
+| **Função**        | Próprio endereço I2C ou novo endereço | Indicam funções a serem executadas pelo módulo | Soma de verificação     |
+
+---
+
+### Mensagem de Resposta I2C
+
+| **Nome**  | **DADOS**                           | **FLAGS**                                | **CHECKSUM**            |
+|-----------|------------------------------------|------------------------------------------|-------------------------|
+| **Tamanho**       | 1 byte                            | 1 byte                                   | 1 byte                  |
+| **Faixa de Valores** | 0 - 100                           | 0 - 255                                  | 0 - 255                 |
+| **Função**        | Leitura analógica já convertida    | Indicam parâmetros de funcionamento      | Soma de verificação     |
+
+
+
 ### Diagrams
 ![GUI Main State Machine](Figures/GUI_MainStateMachine.jpeg)
 ![GUI Screen State Machine](Figures/ScreensStateMachine.jpeg)
@@ -236,6 +258,10 @@ Several challenges during the project led to delays in graphical interface and s
   
 - **PySerial Issues:** The `readline` function from the PySerial library, used to collect commands from modules via USB, did not always adhere to the defined timeout. Replacing it with the similar `read_until` function resolved these issues. Additionally, the delay between write and read operations was not documented, leading to communication failures.
 
+# Hardware Implementation
+
+![Volume Variation](Figures/TestinCircuitPhoto1.png)
+![Volume Variation](Figures/TestinCircuitPhoto2.png)
 
 
 ## Known Issues
