@@ -40,11 +40,16 @@ Feel free to reach out in case of interest or doubts, we would love to help.
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
+  - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Technical Details](#technical-details)
-- [Diagrams](#diagrams)
+  - [Functional Requirements](#functional-requirements)
+  - [Non-Functional Requirements](#non-functional-requirements)
+  - [Development Assumptions](#development-assumptions)
+  - [Embedded Code](#embedde-software)
 - [Testing](#testing)
+- [Hardware Implementation](#hardware-implementation)
+- [Diagrams](#diagrams)
 - [Known Issues](#known-issues)
 - [Contributors](#contributors)
 - [License](#license)
@@ -76,7 +81,7 @@ Feel free to reach out in case of interest or doubts, we would love to help.
    ```
 3. Connect the main module to your USB port.
 
-## Usage
+### Usage
 Run the interface using:
 ```bash
 python main.py
