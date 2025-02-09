@@ -122,13 +122,13 @@ The system will detect connected modules and allow application assignment throug
 
 ## Embedded Program
 
-### Mensagem de Requisição I2C
+### I2C's Requisition Messages
 
-| **Nome**  | **ID**       | **FLAGS**                                | **CHECKSUM**            |
+| **Name**  | **ID**       | **FLAGS**                                | **CHECKSUM**            |
 |-----------|--------------|------------------------------------------|-------------------------|
-| **Tamanho**       | 1 byte       | 1 byte                                   | 1 byte                  |
-| **Faixa de Valores** | 0 - 127     | 0 - 255                                  | 0 - 255                 |
-| **Função**        | Próprio endereço I2C ou novo endereço | Indicam funções a serem executadas pelo módulo | Soma de verificação     |
+| **Size**       | 1 byte       | 1 byte                                   | 1 byte                  |
+| **Range** | 0 - 127     | 0 - 255                                  | 0 - 255                 |
+| **Function**        | Own I2C address or new one | Indicates that there are functions to be executed by the module | Verification sum     |
 
 ### Requisition Flags
 
@@ -137,13 +137,13 @@ The system will detect connected modules and allow application assignment throug
 | 7 | setAddrFLAG | Indicates that the module must update the its adress as the one received on ID
 | 6 | nextModResetFlag | Indicates that the next module must be reset |
 
-### Mensagem de Resposta I2C
+### I2C's Answear Messages
 
-| **Nome**  | **DADOS**                           | **FLAGS**                                | **CHECKSUM**            |
+| **Nome**  | **Data**                           | **FLAGS**                                | **CHECKSUM**            |
 |-----------|------------------------------------|------------------------------------------|-------------------------|
-| **Tamanho**       | 1 byte                            | 1 byte                                   | 1 byte                  |
-| **Faixa de Valores** | 0 - 100                           | 0 - 255                                  | 0 - 255                 |
-| **Função**        | Leitura analógica já convertida    | Indicam parâmetros de funcionamento      | Soma de verificação     |
+| **Size**       | 1 byte                            | 1 byte                                   | 1 byte                  |
+| **Range** | 0 - 100                           | 0 - 255                                  | 0 - 255                 |
+| **Function**        | Analogical read converted   | Indicates functional parameters      | Verification sum     |
 
 ### Answear Flags
 | **Bits**  | **Flag**                           | **Function**                               |
