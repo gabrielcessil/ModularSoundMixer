@@ -237,16 +237,17 @@ Several challenges during the project led to delays in graphical interface and s
 
 
 ## Known Issues
-- **PySimpleGUI Bugs**: Issues with interface closing events due to recent updates.
-- **PySerial Readline**: Inconsistent timeout handling, resolved using `read_until`.
+- **PySimpleGUI Bugs**: Issues with interface closing events due to recent updates. The library's object recently recognize the events of 'closing intention' and the 'closure' itself differently
+- **PySerial Readline**: Inconsistent timeout handling when using ''readline'', resolved using `read_until` instead. 
 - **Delay Handling**: Lack of documentation on delay between read and write operations caused initial failures.
+
+## Next steps 
+- Improvements on hardware documentation of module's and testing setup.
 
 ## Contributors
 - **Guilherme Turatto** - Embedded software and Hardware
 - **Gabriel Cesar Silveira** - Graphical Interface
 
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
