@@ -8,7 +8,7 @@ Feel free to reach out in case of interest or doubts, we would love to help.
 
 ## Contributors
 - **Gabriel Cesar Silveira** - Graphical Interface
-- **Guilherme Turatto** - Embedded software and Hardware
+- **[Guilherme Turatto](https://github.com/guilhermeturatto)** - Embedded software and Hardware
 
 ----
 
