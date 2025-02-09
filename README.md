@@ -19,6 +19,7 @@ Feel free to reach out in case of interest or doubts, we would love to help.
 <div style="display: flex; justify-content: center;">
   <img src="Figures/TestinCircuitPhoto.png" alt="Test Circuit" width="200" />
   <img src="Figures/Screen.png" alt="Main Screen" width="200" style="margin-left: 20px;" />
+  <img src="Figures/Secundario.png" alt="Module" width="200" style="margin-left: 20px;" />
 </div>
 
 ## Table of Contents
